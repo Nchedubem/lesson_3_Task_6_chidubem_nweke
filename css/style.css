@@ -62,10 +62,10 @@ q::before, q::after {
 body {
     background:lightblue;
     overflow-x: hidden;
-    padding-left: 35rem;
 }
-section {
-    /* padding: 1rem; */
+main {
+    padding-left: 38rem;
+
 }
 
 .home , .about , .education{
@@ -174,10 +174,6 @@ li{
     font-weight: bold;
 }
 
-li a{
-    color: red;
-}
-
 .contact{
     margin: 1rem;
     display: flex;
@@ -186,13 +182,17 @@ li a{
     padding: 0 10rem 0 1rem;
 }
 
-input{
+input, textarea{
     height: 30px;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    margin: .5rem;
 }
 
-
+textarea {
+    height: 14rem;
+}
 footer {
-    grid-area: foot;
     background: #111113;
     color: #fff;
     display: flex;
@@ -201,50 +201,26 @@ footer {
     justify-content:flex-end;
 }
 
-@media screen and (width <=580px) {
-    header {
-    }
-
-    header nav a{
-        display: none;
-    }
-
-    .left h2{
-        display: none;
-    }
-
-}
-
 @media screen and (width >=581px){
     .right span{
         display: none;
     }
-
-    section {
-        grid-template-columns: 1fr 1fr;
-    }
-
 }
 
 @media screen and (width >=768px) {
-    section {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 15px;
-    }
-
-    header nav a {
+     header nav a {
         font-size: large;
     }
 }
 
-@media screen and (width >=1024px) {
-    section {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+@media screen and (width <= 900px) {
+    header{
+        height: fit-content;
+        width: 100%;
     }
-}
-
-@media screen and (width >=1440px) {
-    section {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    main {
+        padding-left: 0;
+        padding: 1rem;
+        margin-top: 500px;
     }
 }
