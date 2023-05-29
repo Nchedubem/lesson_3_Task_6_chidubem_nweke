@@ -48,145 +48,203 @@ q::before, q::after {
 
 /* Write your css below here */
 
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+	transition: all .2s linear;
+}
+body {
+    background:lightblue;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+section {
+    /* padding: 1rem; */
+}
+
+.home , .about , .education{
+    padding: 2rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.home p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.btn {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    background:red;
+    color:#dbc7ae;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+}
+.btn i {
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+.btn:hover {
+    background:blue;
+}
+
+.heading {
+    border-bottom: .1rem solid #fff4;
+    color: #080808;
+}
+
+.about h3{
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.about button{
+    width: 200px;
+    margin: 2rem 0 0;
+}
+
+.counter{
+    margin: 1.5rem 0;
+}
+.education{
+    margin: 0;
+}
+
+.education .box{
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.education .box p{
+    margin: .3rem 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--color);
+}
+header .user .name {
+    font-size: 3.5rem;
+    color: #222;
+}
+
+li{
+    margin: .8rem 0;
+    font-weight: bold;
+}
+
+li a{
+    color: red;
+}
+
+.contact{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10rem 0 1rem;
+}
+
+input{
+    height: 30px;
+}
+
+
+footer {
+    grid-area: foot;
+    background: #111113;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+@media screen and (width <=580px) {
+    header {
     }
 
-header{
-	background-color:#7278cc;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
-	}
-	
-header nav .left a{
-	color:aliceblue;
-	text-decoration: none;
-	margin-right: 2rem;
-	text-transform: uppercase;
-	transition: all .2s ease;
+    header nav a{
+        display: none;
+    }
+
+    .left h2{
+        display: none;
+    }
+
 }
-header nav .left a:hover{
-	color:beige;
-	font-size:medium;
-	}
-	
-header nav {
-	padding: 1.8rem 0;
-	}
 
-	header nav .logo{
-	margin-right: 15rem;
-	}
+@media screen and (width >=581px){
+    .right span{
+        display: none;
+    }
 
-body{
-	font-family:'Courier New', Courier, monospace
-	}
+    section {
+        grid-template-columns: 1fr 1fr;
+    }
 
-.container{
-	max-width: 1152px;
-	padding: 0 20px;
-	margin: 0 auto;
-	}
+}
 
-.hero{
-	padding-top: 2rem;
-	padding-bottom: 1rem;
-	}
+@media screen and (width >=768px) {
+    section {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+    }
 
-.hero .left img{
-	width: 370px;
-	}
+    header nav a {
+        font-size: large;
+    }
+}
 
-.hero .right {
-	color:#1a1b1b;
-	margin-top: -9rem;
-	}
+@media screen and (width >=1024px) {
+    section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
 
-.hero .right h6{
-	font-size: 1.6rem;
-	color: var(--primary);
-	margin-bottom: 0.5rem;
-	}
-.hero .right h1{
-	font-size: 4rem;
-	font-weight: 100;
-	line-height: 1.2;
-	margin-bottom: 2rem;
-	}
-
-.hero .right h1 span{
-	color:antiquewhite;
-	}
-
-.hero .right p{
-	line-height: 1.9;
-	margin-bottom: 2rem;
-	}
-
-section.services{
-	background: rgb(17, 17, 17)
-	}
-	.services-head{
-	color: rgb(10, 9, 9);
-	text-align: center;
-	margin-bottom: 1rem;
-	line-height: 0.5rem;
-	color: var(--primary);
-	}
-	.services-head + p{
-	color: var(--white);
-	font-family: 'Lato', sans-serif;
-	margin-bottom: 1rem;
-	text-align: center;
-	margin-bottom: 6rem;
-	font-weight: 400;
-	}
-	.card img{
-	width: 50px;
-	background:#dfdbdb;
-	}
-	section.services .card-grid{
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-	column-gap: 2rem;
-	}
-	section.services .card-grid .card{
-	background: var(--white);
-	padding: 3rem 2rem;
-	position: relative;
-	text-align: center;
-	transition: all .2s ease;
-	}
-	section.services .card-grid .card img{
-	position: absolute;
-	top: -1.5rem;
-	left: 50%;
-	transform: translateX(-50%);
-	color: var();
-	}
-	section.services .card-grid .card h2{
-	font-weight: 600;
-	font-size: 1.2rem;
-	margin-bottom: 0.5rem;
-	}
-	section.services .card-grid .card p{
-	font-family: 'Lato', sans-serif;
-	color: var(--seconday);
-	line-height: 1.6;
-	}
-	section.services .card-grid .card:hover{
-	background: var(--primary);
-	}
-	section.services .card-grid .card:hover h2{
-	color: var(--white);
-	}
-	section.services .card-grid .card:hover p{
-	color: var(--white);
-	}
-
-	
-	
-
-  
+@media screen and (width >=1440px) {
+    section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
