@@ -41,12 +41,188 @@ q::before, q::after {
 	content: none;
 }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 /* Do not write a css rule above here! Use the space below  */
 
 
 /* Write your css below here */
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+	transition: all .2s linear;
+}
+body {
+    background:lightblue;
+    overflow-x: hidden;
+}
+main {
+    padding-left: 38rem;
+
+}
+
+.home , .about , .education{
+    padding: 2rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.home p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.btn {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    background:red;
+    color:#dbc7ae;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+}
+.btn i {
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+.btn:hover {
+    background:blue;
+}
+
+.heading {
+    border-bottom: .1rem solid #fff4;
+    color: #080808;
+}
+
+.about h3{
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.about button{
+    width: 200px;
+    margin: 2rem 0 0;
+}
+
+.counter{
+    margin: 1.5rem 0;
+}
+.education{
+    margin: 0;
+}
+
+.education .box{
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.education .box p{
+    margin: .3rem 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--color);
+}
+header .user .name {
+    font-size: 3.5rem;
+    color: #222;
+}
+
+li{
+    margin: .8rem 0;
+    font-weight: bold;
+}
+
+.contact{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10rem 0 1rem;
+}
+
+input, textarea{
+    height: 30px;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    margin: .5rem;
+}
+
+textarea {
+    height: 14rem;
+}
+footer {
+    background: #111113;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding:15px;
+}
+
+@media screen and (width >=581px){
+    .right span{
+        display: none;
+    }
+}
+
+@media screen and (width >=768px) {
+     header nav a {
+        font-size: large;
+    }
+}
+
+@media screen and (width <= 900px) {
+    header{
+        height: fit-content;
+        width: 100%;
+    }
+    main {
+        padding-left: 0;
+        padding: 1rem;
+        margin-top: 500px;
+    }
+}
